@@ -23,7 +23,7 @@
 
 
   
-  <title>root后优化 - nyrt-blog</title>
+  <title>手表各种问题解决方法 - nyrt-blog</title>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
@@ -102,59 +102,46 @@
     <a class="next-post" href="/2026/04/25/%E8%B6%85%E7%BA%A7%E6%81%A2%E5%A4%8D/" style="text-align: right;">上一篇: 超级恢复教程</a>
   
   
+    <a class="prev-post" href="/2026/05/11/root%E5%90%8E%E4%BC%98%E5%8C%96/" style="text-align: left;">下一篇: root后优化</a>
+  
 </div>
 
 <div class="row">
   <div class="left-content">
     <article class="post-wrapper markdown-body">
   <h2 class="post-title">
-    root后优化
+    手表各种问题解决方法
   </h2>
   <div class="post-meta">
-    <time datetime="Invalid date Invalid date ">2026-04-26</time>
+    <time datetime="Invalid date Invalid date ">2026-05-01</time>
     
     
       
-        <a class="tag" href="/categories/root/">root</a> 
+        <a class="tag" href="/categories/%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94/">疑难解答</a> 
       
-        <a class="tag" href="/categories/root/%E4%BC%98%E5%8C%96/">优化</a> 
+        <a class="tag" href="/categories/%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94/%E6%95%91%E7%A0%96/">救砖</a> 
        
     
     
       
-        <a class="tag" href="/tags/root/">root</a> 
-      
-        <a class="tag" href="/tags/%E4%BC%98%E5%8C%96/">优化</a> 
+        <a class="tag" href="/tags/%E5%8F%98%E7%A0%96/">变砖</a> 
        
     
     
   </div>
   
   <div id="content">
-    <p>root后可以安装第三方软件,刷magisk模块,XP模块等。<br>root后工具自动装的就不介绍了。</p>
-<h2 id="软件推荐"><a href="#软件推荐" class="headerlink" title="软件推荐"></a>软件推荐</h2><h3 id="第三方apk推荐"><a href="#第三方apk推荐" class="headerlink" title="第三方apk推荐"></a>第三方apk推荐</h3><ul>
-<li>微思应用商店，能用的应用商店里比较好用的。</li>
-<li>via浏览器，轻量的浏览器。</li>
-<li>MT文件管理器</li>
-<li>查看快捷方式，可以查看和打开apk的activitys。</li>
-<li>wxwear，也叫蓝微信，最好用的儿童微信改版。</li>
-<li>QQpro，如果掉登录，可以使用手表QQ官方版。</li>
-<li>ADB WiFi,远程连接电脑。</li>
-<li>next快传，和手机传文件。</li>
-</ul>
-<h3 id="XP模块推荐"><a href="#XP模块推荐" class="headerlink" title="XP模块推荐"></a>XP模块推荐</h3><p>使用XP模块需要有XP环境，没有可以使用一键工具安装模块。<br>xp模块也是apk。</p>
+    <p>变砖指的是手表无法正常进入系统，如黑屏、卡BL。<br>此文章会介绍一些问题的解决方法,但是有些可能不算变砖。</p>
+<h2 id="刷入错误的magisk模块"><a href="#刷入错误的magisk模块" class="headerlink" title="刷入错误的magisk模块"></a>刷入错误的magisk模块</h2><ol>
+<li>如果手表能连上电脑，执行命令<code>adb wait-for-device shell &quot;su -c magisk --remove-modules&quot;</code>删除所有模块。</li>
+<li>如果手表不能连接电脑，或执行上面的命令后没用，请使用<a href="https://nyweb.top/2026/04/25/%E8%B6%85%E7%BA%A7%E6%81%A2%E5%A4%8D/">超级恢复</a>。</li>
+</ol>
+<h2 id="桌面已停止运行"><a href="#桌面已停止运行" class="headerlink" title="桌面已停止运行"></a>桌面已停止运行</h2><p>当你手表不是11系列桌面时，<strong>调全局dpi</strong>,手表会显示桌面已停止运行。</p>
 <ul>
-<li>XposedSmsCode,可以识别接收验证码和自动填入等。</li>
-<li>Xposed-edge-pro,好用的手势软件。</li>
-<li>app settings,可以设置局部应用的dpi和分辨率等。</li>
+<li>解决方法：使用电脑连接手表执行<code>adb shell wm density 320</code>。</li>
+<li>如果你想修改dpi，请使用XP模块<strong>app settings重生版</strong>修改单个应用的dpi。</li>
 </ul>
-<h2 id="magisk模块推荐"><a href="#magisk模块推荐" class="headerlink" title="magisk模块推荐"></a>magisk模块推荐</h2><p>magisk模块需要在magisk软件里刷入，部分模块root后已经有了。<br>文件下载：<a target="_blank" rel="noopener" href="https://xtc.icu/">芯云模块商店</a>。</p>
-<ul>
-<li>XTC-ThemePro(alltheme)，全主题模块。</li>
-<li>录制器，录制器apk只能通过模块刷入，如果有了就不用装。</li>
-<li>natureOS 全方面优化模块。</li>
-<li>小天才原生修复1.9,修复systemui等。</li>
-</ul>
+<h2 id="qfil擦除分区后卡BL"><a href="#qfil擦除分区后卡BL" class="headerlink" title="qfil擦除分区后卡BL"></a>qfil擦除分区后卡BL</h2><p>进入BL并不一定是变砖，一直卡在BL才是，此方法仅适用于qfil擦除分区后卡BL。<br>qfil有一个bug，选择一个分区点Erase会擦除所有分区导致卡BL，使用超级恢复是无法解决的。<br>解决方法：<strong>刷入对应手表的基带</strong>。</p>
 
   </div>
 
